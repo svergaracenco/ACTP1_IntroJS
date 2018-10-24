@@ -14,10 +14,11 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
   </head>
   <body>
     <h1> Hey !! </h1>
-    <section class="section-1">
+    <section class="section-1" id="seccion1">
       <h1> Hey </h1>
       <span class="counter"> 101 </span>
       <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
@@ -62,5 +63,39 @@
 
       </fieldset>
     </form>
+    
+
+		<script type="text/javascript">
+		/*Seleccionar el H1 y cambiar el color de texto a rojo*/
+		$("h1").addClass("red");
+			
+		/*  Seleccionar la sección 1 (section-1) y agregar el color de fondo amarillo*/	
+		$("#seccion1").css("background-color", "yellow");
+			
+
+		  /*Al hacerle click al elemento con id row-3 se debe agregar el color de fondo gris y además debe tener una transición de 1 segundo*/
+	$("#row-3").click(function() {
+    $(this).addClass('gray');
+});
+	var counter= $('counter').text();
+			counter = parseInt (counter);
+			counter = counter +10;
+			
+	$('counter').text(counter);
+			
+	</script>
+	
+	<style>
+		.red {color: red;}
+		.gray {background-color: gray; 
+			font-size: 60px; 
+			border-radius: 10px
+			-webkit-transition: all 0.5s ease;
+			-moz-transition: all 0.5s ease;
+			-o-transition: all 0.5s ease;
+			transition: all 0.5s ease;
+		}
+	  </style>
   </body>
+
 </html>
